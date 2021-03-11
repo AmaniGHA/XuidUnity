@@ -2,7 +2,7 @@
   "id": "f3048b1e",
   "name": "9SliceHelper",
   "description": "9SliceHelper",
-  "version": "0.0.1",
+  "version": "0.9.7",
   "host": {
     "app": "XD",
     "minVersion": "29.0"

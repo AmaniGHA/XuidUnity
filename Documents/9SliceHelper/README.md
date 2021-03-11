@@ -1,15 +1,22 @@
 # XdUnityUI 9Slice Helper
 
-![9SliceHelperIntroduction](https://user-images.githubusercontent.com/20549024/83342257-33205e00-a328-11ea-8cca-e78a2a33ca4c.gif)
+![9SliceHelperIntroduction](https://user-images.githubusercontent.com/20549024/92680529-0091f280-f366-11ea-840d-98f921766871.gif)
 
 ## Overview
 
-9Slice with the AdobeXD Plugin (as much as possible).
+You can do bitmap 9slice in XD.<br>
+9-slice is commonly used in game UI.<br>
+Currently XD doesn't have this feature.<br>
+However, you can create similar with this plugin.<br>
+Easy to do.<br>
+1. Drop 9slicable image to AdobeXD.<br>
+2. Add the slice number of pixels to the image layer name. (similar to CSS: border-image-slice)<br>
+     Ex.  frame-image {image-slice: 10px 20px 10px 20px}<br>
+3. Click plugin icon.<br>
 
-### Reference.
+9groups created to simulate 9Slice.<br>
+<br>
 
-- 9Slice in Unity
-    - https://docs.unity3d.com/ja/2018.4/Manual/9SliceSprites.html.
 
 ## How it works
 
@@ -27,22 +34,24 @@
 
 ## How to do it
 
-1. import 9Sliceable images to AdobeXD.
-1. enter a sliced pixel in the layer name of the imported image.
+1. Import 9Sliceable images to AdobeXD.
+1. Enter a sliced pixel in the layer name of the imported image.
     - Examples: top 20 pixels, right 30 pixels, bottom 10 pixels, left 40 pixels
         - ```layer-name {image-slice: 20px 30px 10px 40px}```
     - Example: top right, bottom left, same number of pixels
         - ```layer-name {image-slice: 100px}```
-1. select an image and click 9SliceHelpe from the plugin menu.
-The response size of the created group will be automatically set as follows: 1.
-    - ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/350704/54037def-c3ed-eb7e-257a-e1a49ee47a44.png)
+1. select an image and click 9SliceHelper from the plugin menu.
 
-## Related.
-- XdUnityUI
-    - 9Sliced layers can be brought to Unity with this tool.
+Created groups ResponsiveResize parameters will be automatically set as follows:
+- ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/350704/54037def-c3ed-eb7e-257a-e1a49ee47a44.png)
+
+## Related
+- 9Slice in Unity
+    - https://docs.unity3d.com/ja/2018.4/Manual/9SliceSprites.html.
+- XuidUnity
     - GitHub
-        - https://github.com/itouh2-i0plus/XdUnityUI
-    - Qiita.
+        - https://github.com/itouh2-i0plus/XuidUnity
+    - Qiita(Japanese)
         - https://qiita.com/itouh2-i0plus/items/7eaf9a0a562a4573dc1c
 - Adobe Forum
     - Requests to 9slice on the forum

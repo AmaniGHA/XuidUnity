@@ -21,7 +21,7 @@ namespace I0plus.XduiUnity.Importer.Editor
             if (targetObject != null)
                 if (!PrefabUtility.IsAnyPrefabInstanceRoot(targetObject))
                 {
-                    Debug.Log($"CreateInstanceだが、プレハブのインスタンスではない:{targetObject.name}");
+                    Debug.LogWarning($"CreateInstanceだが、プレハブのインスタンスではない:{targetObject.name}");
                     // 使われないように xd guidを書き換え
                     var xdGuidComponent = targetObject.GetComponent<XdGuid>();
                     if (xdGuidComponent != null) xdGuidComponent.guid = "old:" + xdGuidComponent.guid;

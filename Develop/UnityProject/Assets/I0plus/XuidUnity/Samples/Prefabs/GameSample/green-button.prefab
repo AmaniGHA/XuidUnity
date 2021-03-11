@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3299025190964766805}
   - component: {fileID: 8776688749284516165}
   - component: {fileID: 5407801767478297018}
+  - component: {fileID: 1072935249854169597}
   m_Layer: 5
   m_Name: .image
   m_TagString: Untagged
@@ -74,6 +75,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1072935249854169597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5972316853403987363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd08cd1c8f2e47c8a1490f437a277230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guid: 9b9303ea-479a-4516-80bc-d6b12d98bae5
 --- !u!1 &6404176869219684104
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,6 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9175565476681978865}
   - component: {fileID: 3114990301056126369}
+  - component: {fileID: 3634395628244342652}
   m_Layer: 5
   m_Name: green-button
   m_TagString: Untagged
@@ -154,3 +169,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3634395628244342652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6404176869219684104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd08cd1c8f2e47c8a1490f437a277230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guid: e56ac56c-f5ef-41d4-ae15-91fb2339f7f1

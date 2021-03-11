@@ -29,6 +29,17 @@
   rect-transform-anchors-y: 0.5 0.5;
 }
 
+
+[typeof='BooleanGroup'],
+[typeof='Line'],
+[typeof='Ellipse'],
+[typeof='Rectangle'],
+[typeof='Path'],
+[typeof='Polygon'] {
+  image: true;
+  image-slice: true;
+}
+
 /*
  横にならべる
  */
@@ -451,6 +462,7 @@ ScrollableGroup
 [typeof='Text'],
 [class$='-text'] {
   text: true;
+  /*もしimageになるのならスライスしない*/
   image-slice: false;
   image-type: simple;
   preserve-aspect: true;
@@ -459,6 +471,7 @@ ScrollableGroup
 .textmp,
 [class$='-textmp'] {
   textmp: true;
+  /*もしimageになるのならスライスしない*/
   image-slice: false;
   image-type: simple;
   preserve-aspect: true;
@@ -563,3 +576,4 @@ ScrollableGroup
   create-content: true;
   create-content-name: '.content';
 }
+

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 973436215284943766}
+  - component: {fileID: 1934014020099964901}
   - component: {fileID: 5826138505054300268}
   - component: {fileID: 8789815207238159515}
   m_Layer: 5
@@ -38,6 +39,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1934014020099964901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6960303069474439298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd08cd1c8f2e47c8a1490f437a277230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guid: 882bf015-696d-43f9-bd01-eca61a4ede39
 --- !u!222 &5826138505054300268
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -82,6 +96,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 973436215284943766}
     m_Modifications:
+    - target: {fileID: 3634395628244342652, guid: 8dbfe4f7aff23e14da2e85529c05822d,
+        type: 3}
+      propertyPath: guid
+      value: d5ad0606-1740-4220-9881-7b1895522fdb
+      objectReference: {fileID: 0}
     - target: {fileID: 5407801767478297018, guid: 8dbfe4f7aff23e14da2e85529c05822d,
         type: 3}
       propertyPath: m_Sprite

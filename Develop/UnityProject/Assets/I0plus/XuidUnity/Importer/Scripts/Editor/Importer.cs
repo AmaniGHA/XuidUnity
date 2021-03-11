@@ -59,7 +59,7 @@ namespace I0plus.XduiUnity.Importer.Editor
         private static void UpdateDisplayProgressBar(string message = "")
         {
             if (_progressTotal > 1)
-                EditorUtility.DisplayProgressBar("XdUnitUI Import",
+                EditorUtility.DisplayProgressBar($"{Importer.NAME} Import",
                     $"{_progressCount}/{_progressTotal} {message}",
                     (float) _progressCount / _progressTotal);
         }

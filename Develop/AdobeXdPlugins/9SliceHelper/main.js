@@ -13,7 +13,14 @@ const {
 const application = require('application')
 const commands = require('commands')
 const fs = require('uxp').storage.localFileSystem
-const { alert, confirm, prompt, error, warning } = require('./lib/dialogs.js')
+const {
+  alert,
+  confirm,
+  prompt,
+  error,
+  warning,
+  createDialog,
+} = require('./lib/dialogs.js')
 
 /**
  * Shorthand for creating Elements.
@@ -289,8 +296,8 @@ function resizeMaskAndGraphicNode(
       newMaskBounds = {
         x: wholeGlobalBounds.x + wholeGlobalBounds.width - sliceRightPx,
         y: wholeGlobalBounds.y + wholeGlobalBounds.height - sliceBottomPx,
-        width: sliceLeftPx,
-        height: sliceTopPx,
+        width: sliceRightPx,
+        height: sliceBottomPx,
       }
       newGraphicBounds = {
         x: wholeGlobalBounds.x + wholeGlobalBounds.width - naturalWidth,
@@ -323,7 +330,7 @@ function resizeMaskAndGraphicNode(
       if (sliceBottomPx === 0) break
       const maskNaturalWidth = naturalWidth - sliceRightPx - sliceLeftPx
       const maskWidth = wholeGlobalBounds.width - sliceRightPx - sliceLeftPx
-      const maskHeight = sliceTopPx
+      const maskHeight = sliceBottomPx
       const scaleX = maskWidth / maskNaturalWidth
       newMaskBounds = {
         x: wholeGlobalBounds.x + sliceLeftPx,
@@ -697,6 +704,9 @@ async function pluginMake9Slice(selection, root) {
     '- 9sliced groups parent layer',
   ]
 
+  console.log(`# ${title}`)
+  console.log(`## Check selected`)
+
   if (selection.items.length !== 1) {
     alert(title, errorMessage)
     return
@@ -706,7 +716,7 @@ async function pluginMake9Slice(selection, root) {
   const nodeConstructorName = node.constructor.name
   const nodeFill = node.fill
 
-  console.log(nodeConstructorName)
+  // console.log(nodeConstructorName)
   if (nodeConstructorName === 'Group') {
     //
     const nodeName = node.name
@@ -732,9 +742,23 @@ async function pluginMake9Slice(selection, root) {
     return
   }
 
-  make9Slice(node, selection)
+  const parseResult = getImageSliceParameters(node.name)
+  if (parseResult == null) {
+    await createDialog(
+      {
+        title,
+        msgs:
+          'Need 9slices information in the layer name<br>format: LAYER-NAME {image-slice: [TOP]px [RIGHT]px [BOTTOM]px [LEFT]px}<br><br>ex. Rectangle {image-slice: 20px 30px 20px 30px}',
+      },
+      500,
+    )
+    return
+  }
 
-  console.log('done')
+  make9Slice(node, selection)
+  await createDialog({ title, msgs: 'Done.' }, 300)
+
+  console.log('## done.')
 }
 
 function pluginDuplicateStretch(slection, root) {

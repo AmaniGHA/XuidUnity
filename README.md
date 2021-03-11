@@ -4,11 +4,6 @@
 
 ## Renamed from XdUnityUI
 
-## Language.
-
-- [日本語](README_JP.md)
-- [English](README.md)
-
 ## Overview
 
 Transfer AdobeXD UI/UX Design.<br>
@@ -66,6 +61,9 @@ AdobeXD's features can be converted.
 
 ## ChangeLog
 
+### [v0.9.7] - 2020-09-06
+- more stable and faster.
+
 ### [v0.9.6] - 2020-09-06
 - Unity: non-destructive conversion.
 
@@ -117,11 +115,7 @@ AdobeXD's features can be converted.
 
 - Creating a unitypackage
 - How to install from unitypackage
-</div></details>.
-
-## License.
-
-- MIT license
+</div></details>
 
 ## Support Forum
 

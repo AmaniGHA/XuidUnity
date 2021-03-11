@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6271674161401440062}
   - component: {fileID: 5024189194276447894}
   - component: {fileID: 7859534468067302334}
+  - component: {fileID: 8392265917789349347}
   m_Layer: 5
   m_Name: image
   m_TagString: Untagged
@@ -74,6 +75,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8392265917789349347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230231819937887940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd08cd1c8f2e47c8a1490f437a277230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guid: 20a7fda3-51f3-4970-b1e3-23c2b227938a
 --- !u!1 &4537205143348837372
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,6 +97,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3122887759745181884}
+  - component: {fileID: 844608065455036336}
   m_Layer: 5
   m_Name: ellipse
   m_TagString: Untagged
@@ -110,3 +125,16 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: 42}
   m_SizeDelta: {x: 69, y: 69}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &844608065455036336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4537205143348837372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd08cd1c8f2e47c8a1490f437a277230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guid: fd375ca7-abe8-49a5-83d3-bd799e3b9065

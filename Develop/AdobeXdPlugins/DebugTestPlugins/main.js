@@ -214,6 +214,7 @@ async function pluginGetInteractions(selection, root) {
   let node = selection.items[0]
   if (node) {
     // Print all the interactions triggered by a node
+    console.log(node.triggeredInteractions)
     node.triggeredInteractions.forEach(interaction => {
       console.log(interaction)
       console.log(
